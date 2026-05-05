@@ -10,3 +10,9 @@ include_directories(include)
 add_executable(Crestline main.cpp)
 
 target_link_libraries(Crestline wsock32 ws2_32)
+
+add_custom_target(copy_public ALL
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_SOURCE_DIR}/public
+        ${CMAKE_BINARY_DIR}/public
+)

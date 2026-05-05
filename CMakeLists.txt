@@ -16,3 +16,5 @@ add_custom_target(copy_public ALL
         ${CMAKE_SOURCE_DIR}/public
         ${CMAKE_BINARY_DIR}/public
 )
+
+file(COPY ${CMAKE_SOURCE_DIR}/crestline.conf DESTINATION ${CMAKE_BINARY_DIR})
